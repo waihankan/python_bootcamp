@@ -7,8 +7,6 @@ with their symbol (X or O). The first player to get 3 of their symbols in a row
 and no player has 3 in a row, the game is considered as a draw.
 """
 
-from tabnanny import check
-
 
 def player():
     """ Generate the player 'X' and 'O' turn by turn """
