@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 Rock paper scissor game
 
