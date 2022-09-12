@@ -9,95 +9,49 @@ Rock beats Scissor
 """
 import random
 
-def game():
-      """
-      Rock paper scissor game
-      """
-      print("""Rock paper scissor game
-            1. Scissor
-            2. Rock
-            3. Paper
-            0. Exit
-            """)
-      print("Choose one option: ", end = "")
 
-      choice = int(input())
-      if choice == 1:
-         print("You choose      :Scissor")
-         return "Scissor"
-      elif choice == 2:
-         print("You choose      :Rock")
-         return "Rock"
-      elif choice == 3:
-         print("You choose      :Paper")
-         return "Paper"
-      elif choice == 0:
-         print("Exit")
-         return "Exit"
-      else:
-         print("Invalid choice")
-         return "Invalid choice"
+print("Welcome to Rock Paper Scissor Game")
+print("1. Rock")
+print("2. Paper")
+print("3. Scissor")
+print("4. Exit")
 
-def computer():
-      """
-      Computer choice
-      """
-      choice = random.randint(1, 3)
-      if choice == 1:
-         print("Computer choose :Scissor")
-         return "Scissor"
-      elif choice == 2:
-         print("Computer choose :Rock")
-         return "Rock"
-      elif choice == 3:
-         print("Computer choose :Paper")
-         return "Paper"
-      else:
-         print("Invalid choice")
-         return "Invalid choice"
+def number_to_name(number):
+   if number == 1:
+      return "Rock"
+   elif number == 2:
+      return "Paper"
+   elif number == 3:
+      return "Scissor"
+   else:
+      return "Exit"
 
-def compare(user, computer):
-      """
-      Compare user and computer choice
-      """
-      if user == "Scissor" and computer == "Rock":
-         print("----Winner: Computer----")
-         print("-----------------------\n")
-      elif user == "Scissor" and computer == "Paper":
-         print("----Winner: You----")
-         print("-----------------------\n")
-      elif user == "Rock" and computer == "Scissor":
-         print("----Winner: You----")
-         print("-----------------------\n")
-      elif user == "Rock" and computer == "Paper":
-         print("----Winner: Computer----")
-         print("-----------------------\n")
-      elif user == "Paper" and computer == "Scissor":
-         print("----Winner: Computer----")
-         print("-----------------------\n")
-      elif user == "Paper" and computer == "Rock":
-         print("----Winner: You----")
-         print("-----------------------\n")
-      elif user == computer:
-         print("----Draw----")
-         print("-----------------------\n")
-      else:
-         print("Invalid choice")
-         print("-----------------------\n")
+user = int(input("Enter your choice: "))
+user = number_to_name(user)
+print("You choose     : ", user)
 
-def main():
-      """
-      Main function
-      """
-      while True:
-         user = game()
-         if user == "Exit":
-            break
-         elif user == "Invalid choice":
-            continue
-         com = computer()
-         compare(user, com)  # User vs computer choice and give the result
+if user == "Exit":
+   print("See you again")
+   exit()
 
+else:
+   computer = random.randint(1, 3)
+   computer = number_to_name(computer)
+   print("Computer choose: ", computer)
 
-if __name__ == "__main__":
-      main()
+   if user == "Scissor" and computer == "Rock":
+      print("----Winner: Computer----")
+   elif user == "Scissor" and computer == "Paper":
+      print("----Winner: You----")
+   elif user == "Rock" and computer == "Scissor":
+      print("----Winner: You----")
+   elif user == "Rock" and computer == "Paper":
+      print("----Winner: Computer----")
+   elif user == "Paper" and computer == "Scissor":
+      print("----Winner: Computer----")
+   elif user == "Paper" and computer == "Rock":
+      print("----Winner: You----")
+   elif user == computer:
+      print("----Draw----")
+   else:
+      print("Invalid choice")
