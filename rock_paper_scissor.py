@@ -10,12 +10,6 @@ Rock beats Scissor
 import random
 
 
-print("Welcome to Rock Paper Scissor Game")
-print("1. Rock")
-print("2. Paper")
-print("3. Scissor")
-print("4. Exit")
-
 def number_to_name(number):
    if number == 1:
       return "Rock"
@@ -25,6 +19,13 @@ def number_to_name(number):
       return "Scissor"
    else:
       return "Exit"
+
+
+print("Welcome to Rock Paper Scissor Game")
+print("1. Rock")
+print("2. Paper")
+print("3. Scissor")
+print("4. Exit")
 
 user = int(input("Enter your choice: "))
 user = number_to_name(user)
