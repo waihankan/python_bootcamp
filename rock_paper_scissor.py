@@ -41,15 +41,15 @@ while True:
       computer = number_to_name(computer)
       print("Computer choose: ", computer)
 
-      if user == "Scissor" and computer __ "Rock":
+      if user == ______ and computer == "Rock":
          print("----Winner: Computer----")
-      elif user __ "Scissor" and computer == "Paper":
+      elif user == ______ and computer == "Paper":
          print("----Winner: You----")
       elif user == "Rock" and computer == "Scissor":
-         print("----Winner: _____ ----")
-      elif user == "___" and computer == "Paper":
+         print("----Winner: You----")
+      elif user == ______ and computer == "Paper":
          print("----Winner: Computer----")
-      elif user == "Paper" and computer == "___":
+      elif user == "Paper" and computer == ______:
          print("----Winner: Computer----")
       elif _________________________________________:
          print("----Winner: You----")
